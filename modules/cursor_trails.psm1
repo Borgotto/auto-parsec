@@ -6,6 +6,11 @@ public static extern bool SystemParametersInfo(uint uiAction, uint uiParam, uint
 '@
 $CursorRefresh = Add-Type -MemberDefinition $CSharpSig -Name WinAPICall -Namespace SystemParamInfo -PassThru
 
-function Set-CursorTrails([ValidateRange(0, 7)][int]$Cursors) {
+function Set-CursorTrails {
+    param(
+        [Parameter(Mandatory = $true)]
+        [ValidateRange(0, 7)]
+        [int]$Cursors
+    )
     return $CursorRefresh::SystemParametersInfo(0x005D, $Cursors, $null, 0) | Out-Null
 }
