@@ -1,4 +1,9 @@
-$LogFile = "C:\ProgramData\Parsec\log.txt"
+# Look for the log file in the two possible locations
+$LogFile = if (Test-Path "$env:APPDATA\Parsec\log.txt") {
+    "$env:APPDATA\Parsec\log.txt"
+} else {
+    "$env:ProgramData\parsec\log.txt"
+}
 
 # Begin monitoring the log file for changes
 # The function body is executed only when a username is detected in a new line
