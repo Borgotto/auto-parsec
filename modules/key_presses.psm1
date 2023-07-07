@@ -1,4 +1,5 @@
 # This class is used to simulate key presses.
+# Keycodes can be found here: https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.sendkeys
 Add-Type -AssemblyName System.Windows.Forms
 
 # This function simulates a key press.
