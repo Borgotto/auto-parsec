@@ -12,11 +12,14 @@ Get-Content $LogFile -Wait -Tail 0 | Where-Object { $_ -match "\]\s(.+#\d+)" } |
 
     if ($_.EndsWith(" connected.")) {
         # Code here runs when a user connects
+        Write-Host "$user connected"
     }
     elseif ($_.EndsWith("disconnected.")) {
         # Code here runs when a user disconnects
+        Write-Host "$user disconnected"
     }
     elseif ($_.EndsWith("is trying to connect to your computer.")) {
         # Code here runs when a user attempts to connect
+        Write-Host "$user is trying to connect"
     }
 }
