@@ -9,7 +9,7 @@ $CursorRefresh = Add-Type -MemberDefinition $CSharpSig -Name WinAPICall -Namespa
 function Set-CursorTrails {
     param(
         [Parameter(Mandatory = $true)]
-        [ValidateRange(0, 7)]
+        [ValidateRange(0, [UInt32]::MaxValue)]
         [int]$Cursors
     )
     return $CursorRefresh::SystemParametersInfo(0x005D, $Cursors, $null, 0) | Out-Null
