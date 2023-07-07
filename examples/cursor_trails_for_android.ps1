@@ -2,7 +2,7 @@
 # This is useful for Android users who can't see the cursor when they connect to a host
 
 # Import the cursor_trails module
-Import-Module .\modules\cursor_trails.psm1
+Import-Module $PSScriptRoot\..\modules\cursor_trails.psm1
 
 # Look for the log file in the two possible locations
 $LogFile = if (Test-Path "$env:APPDATA\Parsec\log.txt") {

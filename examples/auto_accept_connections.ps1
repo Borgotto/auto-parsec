@@ -3,7 +3,7 @@
 # can connect without any interaction from the host.
 
 # Import the key_presses module
-Import-Module .\modules\key_presses.psm1
+Import-Module $PSScriptRoot\..\modules\key_presses.psm1
 
 # Look for the log file in the two possible locations
 $LogFile = if (Test-Path "$env:APPDATA\Parsec\log.txt") {
