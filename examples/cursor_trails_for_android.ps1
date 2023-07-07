@@ -16,8 +16,10 @@ $LogFile = if (Test-Path "$env:APPDATA\Parsec\log.txt") {
 Write-Host "Script started. Press Ctrl + C to stop."
 Get-Content $LogFile -Wait -Tail 0 | Where-Object { $_ -match "\]\s(.+#\d+)" } | ForEach-Object {
     if ($_.EndsWith(" connected.")) {
-        # This line enables Cursor Trails, setting the trail length to 2
-        Set-CursorTrails -Cursors 2
+        # This line enables Cursor Trails
+        # setting the trail length to 10000 allows the cursor to be visible
+        # on Android while not impacting the user experience on Windows
+        Set-CursorTrails -Cursors 10000
     }
     elseif ($_.EndsWith("disconnected.")) {
         # This line disables Cursor Trails
