@@ -11,6 +11,7 @@ $LogFile = if (Test-Path "$env:APPDATA\Parsec\log.txt") {
 
 # Begin monitoring the log file for changes
 # The function body is executed only when a username is detected in a new line
+Write-Host "Script started. Press Ctrl + C to stop."
 Get-Content $LogFile -Wait -Tail 0 | Where-Object { $_ -match "\]\s(.+#\d+)" } | ForEach-Object {
     if ($_.EndsWith(" connected.")) {
         # Launch Steam Big Picture
