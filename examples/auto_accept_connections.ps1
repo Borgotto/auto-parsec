@@ -14,7 +14,7 @@ Import-Module $PSScriptRoot\..\modules\key_presses.psm1
 function OnConnectAttempt($user) {
     Write-Host "$user is trying to connect, letting them in..."
     # Auto accept all incoming connections by pressing Ctrl + F1
-    Send-Keys -Keys "^{F1}"
+    Send-Keys -Keys "^({F1 3})"
 }
 
 
