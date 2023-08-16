@@ -18,7 +18,7 @@ $ban_file = "/path/to/ban_list.txt"
 Import-Module $PSScriptRoot\..\modules\key_presses.psm1
 
 # Override the OnConnectAttempt function with the following:
-function OnConnect($user) {
+function OnConnectAttempt($user) {
     # If the user is in the ban list, don't let them in
     if (Get-Content $ban_file -ErrorAction Ignore | Select-String "\b($user)\b") {
         Write-Warning "$user is banned, NOT letting them in..."
