@@ -13,6 +13,9 @@ It can be used to start a game, launch a program, automatically accept connectio
 2. Open the `auto-parsec.ps1` file and edit the file to your liking or use one of the already made [examples](examples)
 3. Run it with PowerShell 5.1 or newer (right click -> Run with PowerShell)
 
+4. (Optional) You can automatically run the script in the background using Task Scheduler:\
+create a new Task, give it a name, set a trigger and then when adding an action be sure to write `powershell` in the `Program/script` field and `-WindowsStyle hidden <path-to-your-script.ps1>` in the `Add arguments` box.
+
 ##
 
 ### Contributing:
