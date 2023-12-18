@@ -1,5 +1,5 @@
 # auto-parsec
-[![Powershell 5.1](https://github.com/Borgotto/quick-parsec-deploy/actions/workflows/powershell-test.yml/badge.svg?branch=main)](https://github.com/Borgotto/quick-parsec-deploy/actions/workflows/powershell-test.yml)&nbsp;
+[![Powershell 5.1](https://github.com/Borgotto/quick-parsec-deploy/actions/workflows/powershell-test.yml/badge.svg)](https://github.com/Borgotto/quick-parsec-deploy/actions/workflows/powershell-test.yml)&nbsp;
 
 A simple PowerShell script intended to be used with [Parsec](https://parsecgaming.com/) to automate stuff on the host computer when a client connects to it.
 
