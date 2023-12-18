@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 #
 # This example launches Steam Big Picture when a user connects and it closes
-# Steam when the user disconnects.
+# Steam Big Picture when the users disconnects.
 #
 # It's a good way to play games on your host computer with only a controller
 #
@@ -23,7 +23,14 @@ function OnDisconnect($user) {
     Write-Host "$user disconnected, closing Steam"
 
     # Close Steam
-    Get-Process "Steam" | Stop-Process
+    $steamProcesses = Get-Process | Where-Object { $_.MainWindowTitle -like "*Big Picture*" }
+    if ($currentlyConnectedUsers.Count -eq 0) {
+        if ($steamProcesses | ForEach-Object {$_.CloseMainWindow()}) {
+            Write-Host "Steam Big Picture closed"
+        } else {
+            Write-Host "Steam Big Picture not running"
+        }
+    }
 }
 
 
