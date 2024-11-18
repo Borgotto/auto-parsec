@@ -5,10 +5,6 @@ A simple PowerShell script intended to be used with [Parsec](https://parsecgamin
 
 It can be used to start a game, launch a program, automatically accept connection requests or anything else you can think of.
 
-# WARNING:
-## Due to recent changes in Parsec the script may not work anymore
-#### (I'll fix it when I have some free time)
-
 ##
 
 ### Usage:
