@@ -1,7 +1,7 @@
 # auto-parsec
 [![Powershell 5.1](https://github.com/Borgotto/quick-parsec-deploy/actions/workflows/powershell-test.yml/badge.svg)](https://github.com/Borgotto/quick-parsec-deploy/actions/workflows/powershell-test.yml)&nbsp;
 
-A simple PowerShell script intended to be used with [Parsec](https://parsecgaming.com/) to automate stuff on the host computer when a client connects to it.
+A simple PowerShell script intended to be used with [Parsec](https://parsec.app/) to automate stuff on the host computer when a client connects to it.
 
 It can be used to start a game, launch a program, automatically accept connection requests or anything else you can think of.
 
